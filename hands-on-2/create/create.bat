@@ -1,0 +1,16 @@
+@echo off
+echo Creando archivo mytext...
+echo Hola Mundo > mytext.txt
+echo Mostrando contenido de mytext.txt:
+type mytext.txt
+echo Creando carpeta "backup"...
+mkdir backup
+echo Copiando mytext.txt a la carpeta "backup"...
+copy mytext.txt backup
+echo Listando contenido del subdirectorio "backup":
+dir backup
+echo Eliminando el archivo mytext.txt de la carpeta "backup"...
+del backup\mytext.txt
+echo Eliminando el subdirectorio "backup"...
+rmdir backup
+pause
